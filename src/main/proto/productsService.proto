@@ -11,8 +11,13 @@ service ProductsServiceService {
   rpc send (ProductsServiceRequest) returns (ProductsServiceReply) {}
 }
 
+enum STATUS {
+  OK = 0;
+}
+
 message ProductsServiceRequest {
   string name = 1;
+  double price = 2;
 }
 
 message ProductsServiceReply {
